@@ -1,0 +1,36 @@
+import pygame
+
+# initialize Pygame
+pygame.init()
+
+# set up the game window
+screen_width = 800
+screen_height = 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# set up the game clock
+clock = pygame.time.Clock()
+
+# set up the game loop
+running = True
+while running:
+    # handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    
+    # update game state
+    
+    # draw game objects
+    screen.fill((255, 255, 255)) # fill screen with white color
+    # example object
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(100, 100, 50, 50)) # black rectangle
+    
+    # update display
+    pygame.display.flip()
+    
+    # set the game's framerate
+    clock.tick(60)
+
+# quit Pygame when the game loop is finished
+pygame.quit()
